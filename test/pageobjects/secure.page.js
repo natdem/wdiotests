@@ -1,13 +1,9 @@
 import Page from './page';
 
-/**
- * sub page containing specific selectors and methods for a specific page
- */
-class SecurePage extends Page {
-    /**
-     * define selectors using getter methods
-     */
-    get flashAlert () { return $('#flash') }
+class LoginPage extends Page {
+    get inputUsername () { return $('normal_login_email') }
+    get inputPassword () { return $('normal_login_password') }
+    get buttnSubmit () { return $('.login_email') }
 }
 
 export default new SecurePage();
